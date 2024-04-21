@@ -1,7 +1,8 @@
 <template>
-  <div>
-    <NuxtWelcome />
+  <div class="bg-secondary  ">
+    <TheNav />
+    <TheHeader />
   
-    <div class="bg-red-500 text-white">cccccc</div>
+    
   </div>
 </template>
