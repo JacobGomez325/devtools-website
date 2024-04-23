@@ -1,5 +1,5 @@
 <template>
-  <div class="flex container mx-auto items-center justify-between">
+  <div class="flex container mx-auto px-6 items-center justify-between">
     <div class="flex space-x-2 items-center">
       <linkItem title="DevTools" link="#" size="text-2xl" >
         <IconsTools height="2.5em" width="1.8em" color="text-primary" />

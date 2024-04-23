@@ -1,5 +1,5 @@
 <template>
-  <div class="container mx-auto grid grid-cols-2 mt-[80px]  gap-8 pb-4 text-white">
+  <div class="container mx-auto px-6 grid grid-cols-2 mt-[80px]  gap-8 pb-4 text-white">
     <div>
       <h1 class="text-6xl font-bold">DevToolBox</h1>
       <p class="leading-8 pb-3 pt-8 text-lg  font-semibold">
