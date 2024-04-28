@@ -4,16 +4,28 @@
     <TheHeader />
 
     <main class="container mx-auto  px-6 my-grid">
-      <div class="px-2 py-5">
-        <h4 class="text-white font-semibold text-lg py-4">Categories </h4>
-
+      <div class="px-2 py-5  ">
+        <h4 class="text-white  font-semibold py-4">Categories </h4>
         <CategoriesItem  
           v-for="(item,index) in categoriesItems" 
           :key="index" 
           :title="item.title" 
           :icon="item.icon"  />
       </div>
-      <div class="bg-red-500 h-[500px]">demo 2</div>
+      <div class="h-[500px]">
+       <div class="flex justify-between">
+        <SearchBar />
+        <button>filtre</button>
+       </div>
+       <div class="content grid grid-cols-3 gap-8 py-8 ">
+        <cardsOs 
+          v-for="i in 5" :key="i"
+          title="Linux" 
+          description="lorem ipsum dolor set"> 
+          <IconsLinux width="1.3em" height="1.3em" />
+        </cardsOs>
+       </div>
+      </div>
     </main>
   
     
