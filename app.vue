@@ -12,27 +12,32 @@
           :title="item.title" 
           :icon="item.icon"  />
       </div>
-      <div class="h-[500px]">
+      <div class="">
        <div class="flex justify-between">
         <SearchBar />
-        <button>filtre</button>
+        <Dropdown :items="['Linux','Mac Os']" />
        </div>
        <div class="content grid grid-cols-3 gap-8 py-8 ">
-        <cardsOs 
-          v-for="i in 5" :key="i"
-          title="Linux" 
-          description="lorem ipsum dolor set"> 
-          <IconsLinux width="1.3em" height="1.3em" />
-        </cardsOs>
+        <CardsElement 
+          v-for="(item,index) in DevtoolsItems" 
+          :key="index"
+          :title="item.title" 
+          :image ="item.image"
+          :description="item.description" /> 
+          
        </div>
       </div>
     </main>
+    <TheFooter />
   
     
   </div>
 </template>
 <script setup lang="ts">
 import type {CategoriesItem} from "@/types/categorie"
+import type {devtoolsElement} from "@/types/devtools"
+
+
 const categoriesItems = ref<CategoriesItem[]>([
   {
     title:'Media',
@@ -57,6 +62,34 @@ const categoriesItems = ref<CategoriesItem[]>([
 
 ])
 
+const DevtoolsItems = ref<devtoolsElement[]>([
+  {
+    title:'Brave',
+    description:'lorem ipsum dolor sit amet, consectetur adipiscing elit',
+    image:'/images/brave.png'
+  },
+  {
+    title:'Google chrome',
+    description:'lorem ipsum dolor sit amet, consectetur adipiscing elit',
+    image:'/images/chrome.png'
+  },
+  {
+    title:'VS code ',
+    description:'lorem ipsum dolor sit amet, consectetur adipiscing elit',
+    image:'/images/vscode.png'
+  },
+  {
+    title:'Microsoft Edge',
+    description:'lorem ipsum dolor sit amet, consectetur adipiscing elit',
+    image:'/images/edge.png'
+  },
+  {
+    title:'Obs studio',
+    description:'lorem ipsum dolor sit amet, consectetur adipiscing elit',
+    image:'/images/obs.png'
+  },
+  
+])
 
 </script>
 <style scoped>

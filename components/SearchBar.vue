@@ -18,7 +18,7 @@
     </span>
     <span class="absolute inset-y-0 end-0 flex items-center px-3">
       <kbd
-        class="inline-flex items-center justify-center text-gray-900  h-5 min-w-[20px] text-[11px] px-1 rounded font-medium font-sans bg-gray-100  ring-1 ring-gray-300  ring-inset"
+        class="inline-flex items-center justify-center text-gray-50  h-5 min-w-[20px] text-[11px] px-1 rounded font-medium font-sans bg-elementorColor  ring-1 ring-gray-300  ring-inset"
       >
         /
       </kbd>
