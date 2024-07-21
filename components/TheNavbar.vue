@@ -8,8 +8,6 @@
     </div>
     <div class="flex">
       <LinkItem title="Docs" link="#" size="text-sm" />
-      <LinkItem title="Ressources" link="#" size="text-sm" />
-      <LinkItem title="Exemples" link="#" size="text-sm" />
       <LinkItem title="About" link="#" size="text-sm" />
     </div>
 

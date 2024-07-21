@@ -27,6 +27,7 @@
               v-slot="{ active }"
               :key="index">
               <button
+              @click="getItem(item)"
                 :class="[
                   active ? 'bg-secondary text-white' : 'text-gray-900',
                   'group flex w-full items-center rounded-md px-2 py-2 text-sm',
@@ -48,9 +49,14 @@
 <script setup lang="ts">
 import { Menu, MenuButton, MenuItems, MenuItem } from '@headlessui/vue'
 import type { PropType } from 'vue';
+const emits = defineEmits(['onGetItem'])
 const props = defineProps({
   items:{
     type:Array as PropType<string[]>
   }
 })
+
+function getItem(item:string) {
+  emits("onGetItem",item)
+}
 </script>

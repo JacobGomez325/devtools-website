@@ -13,12 +13,12 @@
     <div class="grid grid-cols-2 gap-4">
       <cardsOs 
         title="Linux" 
-        description="lorem ipsum dolor set"> 
+        description="For Linux, DevToolBox features browsers, Docker, Jenkins, and OBS Studio."> 
         <IconsLinux width="1.3em" height="1.3em" />
       </cardsOs>
       <cardsOs 
         title="Mac os" 
-        description="lorem ipsum dolor set"> 
+        description="For macOS, DevToolBox includes browsers, Docker, Jenkins, and OBS Studio."> 
         <IconsApple width="1.3em" color="text-gray-200" height="1.3em" />
       </cardsOs>
     </div>

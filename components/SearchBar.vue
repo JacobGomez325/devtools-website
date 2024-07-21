@@ -2,8 +2,8 @@
   <div class="relative w-56">
     <input
       name="q"
-      value=""
       type="text"
+      v-model="value"
       placeholder="Search..."
       class="relative block w-full disabled:cursor-not-allowed disabled:opacity-75 focus:outline-primary outline-none border-0 text-white rounded-md placeholder-gray-400 text-sm px-3 py-2 shadow-sm  bg-elementColor   ps-10 pe-10"
       autocomplete="off"
@@ -26,6 +26,23 @@
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import type { PropType } from 'vue';
+const emits = defineEmits(['update:modelValue'])
+const props = defineProps({
+  modelValue:{
+    required:true,
+    type:String as PropType<string>
+  },
+})
+const value = computed({
+  get() {
+    return props.modelValue
+  },
+  set(value) {
+    emits('update:modelValue', value)
+  }
+})
+</script>
 
 <style scoped></style>
